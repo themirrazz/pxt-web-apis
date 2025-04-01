@@ -28,7 +28,7 @@ This is a MakeCode extension that aims to allow JavaScript code to use web APIs 
   * Prompt does not work. Alert and confirm have full support.
 * 2D Canvas Graphics - 0.0%
 * AudioContext - 0.0%
-* WebAssembly - 0.0%
+* [WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly) - 0.0%
 
 ## How to import
 * open [https://makecode.microbit.org/](https://makecode.microbit.org/)
