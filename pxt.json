@@ -14,7 +14,9 @@
         "promise.ts",
         "error.ts",
         "location.ts",
-        "document.ts"
+        "document.ts",
+        "screen.ts",
+        "storage.ts"
     ],
     "testFiles": [
         "test.ts"

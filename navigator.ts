@@ -77,6 +77,8 @@ namespace navigator {
     export const cookieEnabled = true;
     
     export const deviceMemory = 1;
+
+    export const hardwareConcurrency = 1;
     
     export const language = "en";
 
@@ -91,6 +93,10 @@ namespace navigator {
     export const doNotTrack = 'unspecified';
 
     export const platform = 'MbedOS armv7';
+
+    export const appName = "";
+
+    export const appVersion = "";
 
     export const vendor = "";
 

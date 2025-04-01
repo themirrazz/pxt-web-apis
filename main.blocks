@@ -1,1 +1,1 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><variables></variables><block type="pxt-on-start" x="20" y="20"><statement name="HANDLER"><block type="typescript_statement"><mutation xmlns="http://www.w3.org/1999/xhtml" line0="console.log(navigator.userAgent);" numlines="1"></mutation></block></statement></block></xml>
+<xml xmlns="https://developers.google.com/blockly/xml"><variables></variables><block type="pxt-on-start" id="O9eLMKql%Q-y~Lg0W1M1" x="0" y="0"></block></xml>
