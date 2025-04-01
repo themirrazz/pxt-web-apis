@@ -12,7 +12,9 @@
         "README.md",
         "navigator.ts",
         "promise.ts",
-        "error.ts"
+        "error.ts",
+        "location.ts",
+        "document.ts"
     ],
     "testFiles": [
         "test.ts"

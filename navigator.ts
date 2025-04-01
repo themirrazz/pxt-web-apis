@@ -74,6 +74,28 @@ namespace navigator {
 
     export const clipboard = new Clipboard();
 
+    export const cookieEnabled = true;
+    
+    export const deviceMemory = 1;
+    
+    export const language = "en";
+
+    export const languages = ['en-US'];
+
+    export const pdfViewerEnabled = false;
+
+    export const webdriver = false;
+
+    export const appCodeName = 'Mozilla';
+
+    export const doNotTrack = 'unspecified';
+
+    export const platform = 'MbedOS armv7';
+
+    export const vendor = "";
+
+    export const vendorSub = "";
+
     export const userAgent = (
         "Mozilla/5.0 (BBC Micro:bit "
         + control.hardwareVersion() +
@@ -86,5 +108,46 @@ namespace navigator {
         return new Promise(function (ack: Function) {
             ack(new BatteryManager());
         });
+    }
+
+    export function canShare(data: any):boolean {
+        return false;
+    }
+
+    export function share(data: any):Promise {
+        return new Promise(function (ack: any, err: Function) {
+            err(new DOMException('DataError', "An error occurred sharing the data."));
+        });
+    }
+
+    export function vibrate(): void {
+        // to be done
+    }
+
+    export function javaEnabled() {
+        return false;
+    }
+
+    export function taintEnabled() {
+        return false;
+    }
+
+    export function unregisterProtocolHandler(
+        scheme: string,
+        url: string
+    ): void {
+        // no-op
+    }
+
+    export function registerProtocolHandler(
+        scheme: string,
+        url: string
+    ): void {
+        // no-op
+    }
+
+    export function getAutoplayPolicy(type: any, element: any, context: any) {
+        // Autoplay should always be allowed
+        return 'allowed';
     }
 }
