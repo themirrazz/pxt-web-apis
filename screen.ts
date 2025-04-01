@@ -1,4 +1,4 @@
-namespace screen {
-    export const width = 5;
-    export const height = 5;
+const screen = {
+    width: 5,
+    height: 5
 }

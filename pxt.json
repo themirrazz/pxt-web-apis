@@ -16,7 +16,8 @@
         "location.ts",
         "document.ts",
         "screen.ts",
-        "storage.ts"
+        "storage.ts",
+        "window.ts"
     ],
     "testFiles": [
         "test.ts"
