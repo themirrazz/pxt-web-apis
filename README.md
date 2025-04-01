@@ -10,6 +10,9 @@ This is a MakeCode extension that aims to allow JavaScript code to use web APIs 
 * Battery Status API - 50.0%
   * It is currently implemented using a shim; a real implementation will come using C++ eventually.
 * User Agent - 100.0%
+* Vibration API - 0.4%
+  * A shim is in place; it will be implemented on pin 2.
+* WebUSB - 0.0%
 * Media Devices API - 0.0%
 * [Media Session API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mediaSession) - 0.0%
 * Local Storage/Session Storage - 85.2%
@@ -23,6 +26,9 @@ This is a MakeCode extension that aims to allow JavaScript code to use web APIs 
   * A window close is simulated by causing a kernel panic.
 * Alert/Confirm/Prompt - 66.6%
   * Prompt does not work. Alert and confirm have full support.
+* 2D Canvas Graphics - 0.0%
+* AudioContext - 0.0%
+* WebAssembly - 0.0%
 
 ## How to import
 * open [https://makecode.microbit.org/](https://makecode.microbit.org/)
@@ -30,5 +36,4 @@ This is a MakeCode extension that aims to allow JavaScript code to use web APIs 
 * click on **Extensions** under the gearwheel menu
 * search for **https://github.com/themirrazz/pxt-web-apis** and import
 
-## Edit this project
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
