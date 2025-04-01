@@ -17,7 +17,9 @@
         "document.ts",
         "screen.ts",
         "storage.ts",
-        "window.ts"
+        "window.ts",
+        "websocket.ts",
+        "eventTarget.ts"
     ],
     "testFiles": [
         "test.ts"
