@@ -10,7 +10,7 @@ let clearTimeout = function (id: number) {
 let setInterval: any = (function () {
     let st_id = 1;
     let cleared: number[] = [];
-    return function (
+    return (function (
         func: Function,
         time?: number
     ) {
@@ -28,13 +28,13 @@ let setInterval: any = (function () {
             }
         });
         control.inBackground(f);
-    };
+    });
 })();
 
 let setTimeout: any = (function () {
     let st_id = 1;
     let cleared:number[] = [];
-    return function (
+    return (function (
         func: Function,
         time?: number
     ) {
@@ -50,5 +50,5 @@ let setTimeout: any = (function () {
                 func();
             }
         });
-    };
+    });
 })();
