@@ -7,7 +7,7 @@ let clearTimeout = function (id: number) {
     setTimeout(clearTimeout, id);
 }
 
-let setInterval: any = (function () {
+let setInterval: Function = (function () {
     let st_id = 1;
     let cleared: number[] = [];
     return (function (
@@ -31,7 +31,7 @@ let setInterval: any = (function () {
     });
 })();
 
-let setTimeout: any = (function () {
+let setTimeout: Function = (function () {
     let st_id = 1;
     let cleared:number[] = [];
     return (function (
