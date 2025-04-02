@@ -1,14 +1,15 @@
 // Add your code here
-let clearInterval = function (id: number) { }
+let clearInterval = function (id: number) {
+    setInterval(clearInterval, id);
+}
 
-let clearTimeout = function (id: number) { }
+let clearTimeout = function (id: number) {
+    setTimeout(clearTimeout, id);
+}
 
 let setInterval: any = (function () {
     let st_id = 1;
     let cleared: number[] = [];
-    clearInterval = function (id: number) {
-        cleared.push(id);
-    }
     return function (
         func: Function,
         time?: number
@@ -33,13 +34,13 @@ let setInterval: any = (function () {
 let setTimeout: any = (function () {
     let st_id = 1;
     let cleared:number[] = [];
-    clearTimeout = function (id: number) {
-        cleared.push(id);
-    }
     return function (
         func: Function,
         time?: number
     ) {
+        if (func === clearTimeout) {
+            return cleared.push(time);
+        }
         let t = time || 1;
         let k = st_id;
         st_id++;
