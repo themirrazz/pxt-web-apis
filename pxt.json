@@ -22,7 +22,8 @@
         "eventTarget.ts",
         "audiocontext.ts",
         "timeouts.ts",
-        "mediasession.ts"
+        "mediasession.ts",
+        "chrome.ts"
     ],
     "testFiles": [
         "test.ts"

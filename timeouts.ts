@@ -1,54 +1,38 @@
 // Add your code here
+
 let clearInterval = function (id: number) {
-    setInterval(clearInterval, id);
+    chrome.timerClearedIds.interval.push(id);
 }
 
 let clearTimeout = function (id: number) {
-    setTimeout(clearTimeout, id);
+    chrome.timerClearedIds.timeout.push(id);
 }
 
-let setInterval: Function = (function () {
-    let st_id = 1;
-    let cleared: number[] = [];
-    return (function (
-        func: Function,
-        time?: number
-    ) {
-        if (func === clearInterval) {
-            return cleared.push(time);
+let setInterval = function (func: Function, time?: number) {
+    let t = time || 1;
+    let k = chrome.timerId.interval;
+    chrome.timerId.interval += 1;
+    let f = (function () {
+        basic.pause(t);
+        if (chrome.timerClearedIds.interval.indexOf(k) < 0) {
+            func();
+            control.inBackground(f);
         }
-        let t = time || 1;
-        let k = st_id;
-        st_id++;
-        let f = (function () {
-            basic.pause(t);
-            if (cleared.indexOf(st_id) < 0) {
-                func();
-                control.inBackground(f);
-            }
-        });
-        control.inBackground(f);
     });
-})();
+    control.inBackground(f);
+    return k;
+};
 
-let setTimeout: Function = (function () {
-    let st_id = 1;
-    let cleared:number[] = [];
-    return (function (
-        func: Function,
-        time?: number
-    ) {
-        if (func === clearTimeout) {
-            return cleared.push(time);
+let setTimeout = function (func: Function, time?: number) {
+    let t = time || 1;
+    let k = chrome.timerId.timeout;
+    chrome.timerId.timeout += 1;
+    let f = (function () {
+        basic.pause(t);
+        if (chrome.timerClearedIds.timeout.indexOf(k) < 0) {
+            func();
         }
-        let t = time || 1;
-        let k = st_id;
-        st_id++;
-        control.inBackground(function () {
-            basic.pause(t);
-            if(cleared.indexOf(st_id) < 0) {
-                func();
-            }
-        });
     });
-})();
+    control.inBackground(f);
+    return k;
+}
