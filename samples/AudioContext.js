@@ -8,7 +8,7 @@ const oscillator = audioCtx.createOscillator();
 oscillator.type = "square"; // square wave
 
 // Function to schedule a note
-function playNote(frequency, delay) {
+function playNote(frequency) {
     oscillator.frequency.setValueAtTime(frequency, audioCtx.currentTime);
 }
 
@@ -32,6 +32,10 @@ const melody = [
 // Loop through the melody array and schedule the notes
 melody.forEach((note) => {
     setTimeout(() => {
-        playNote(note.frequency, note.time);
+        playNote(note.frequency);
     }, note.time);
 });
+
+setTimeout(() => {
+    oscillator.disconnect();
+}, melody[melody.length-1].time + 500);
