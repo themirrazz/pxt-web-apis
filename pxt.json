@@ -19,7 +19,9 @@
         "storage.ts",
         "window.ts",
         "websocket.ts",
-        "eventTarget.ts"
+        "eventTarget.ts",
+        "audiocontext.ts",
+        "timeouts.ts"
     ],
     "testFiles": [
         "test.ts"
@@ -31,5 +33,5 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "blocksprj"
 }
