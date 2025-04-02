@@ -29,8 +29,7 @@ This is a MakeCode extension that aims to allow JavaScript code to use web APIs 
 * 2D Canvas Graphics - 0.0%
 * AudioContext - 22.7%
 * [WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly) - 0.0%
-* Timeouts and Intervals - 33.3%
-  * Only setTimeout works as of now
+* Timeouts and Intervals - 66.6%
 
 ## How to import
 * open [https://makecode.microbit.org/](https://makecode.microbit.org/)
