@@ -12,7 +12,7 @@ let setInterval = function (func: Function, time?: number) {
     let t = time || 1;
     let k = chrome.timerId.interval;
     chrome.timerId.interval += 1;
-    let f = (function () {
+    let f = (function xyz () {
         basic.pause(t);
         if (chrome.timerClearedIds.interval.indexOf(k) < 0) {
             func();
@@ -27,7 +27,7 @@ let setTimeout = function (func: Function, time?: number) {
     let t = time || 1;
     let k = chrome.timerId.timeout;
     chrome.timerId.timeout += 1;
-    let f = (function () {
+    let f = (function xyz () {
         basic.pause(t);
         if (chrome.timerClearedIds.timeout.indexOf(k) < 0) {
             func();
