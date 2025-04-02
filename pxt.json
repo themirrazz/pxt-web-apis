@@ -21,7 +21,8 @@
         "websocket.ts",
         "eventTarget.ts",
         "audiocontext.ts",
-        "timeouts.ts"
+        "timeouts.ts",
+        "mediasession.ts"
     ],
     "testFiles": [
         "test.ts"

@@ -102,6 +102,8 @@ namespace navigator {
 
     export const vendorSub = "";
 
+    export const mediaSession = new MediaSession();
+
     export const userAgent = (
         "Mozilla/5.0 (BBC Micro:bit "
         + control.hardwareVersion() +
