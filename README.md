@@ -27,8 +27,10 @@ This is a MakeCode extension that aims to allow JavaScript code to use web APIs 
 * Alert/Confirm/Prompt - 66.6%
   * Prompt does not work. Alert and confirm have full support.
 * 2D Canvas Graphics - 0.0%
-* AudioContext - 0.0%
+* AudioContext - 22.7%
 * [WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly) - 0.0%
+* Timeouts and Intervals - 33.3%
+  * Only setTimeout works as of now
 
 ## How to import
 * open [https://makecode.microbit.org/](https://makecode.microbit.org/)
